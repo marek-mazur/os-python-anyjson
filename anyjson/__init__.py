@@ -30,7 +30,8 @@ else:
 #: List of known json modules, and the names of their loads/dumps
 #: methods, as well as the exceptions they throw.  Exception can be either
 #: an exception class or a string.
-_modules = [("yajl", "dumps", TypeError, "loads", ValueError, "load"),
+_modules = [("ujson", "dumps", TypeError, "loads", ValueError, None),
+            ("yajl", "dumps", TypeError, "loads", ValueError, "load"),
             ("jsonlib2", "write", "WriteError", "read", "ReadError", None),
             ("jsonlib", "write", "WriteError", "read", "ReadError", None),
             ("simplejson", "dumps", TypeError, "loads", ValueError, "load"),
